@@ -5,7 +5,7 @@ export default function Header() {
         <header>
             <div className="items-center justify-between p-4 bg-main text-white">
                 <Link href = "/">
-                    <div className="text-2xl text-center md:text-3xl md:text-left">いつかやるかもしれないブログ</div>
+                    <div className="font-nicomoji text-2xl text-center md:text-3xl md:text-left">いつかやるかもしれないブログ</div>
                 </Link>
             </div>
         </header>

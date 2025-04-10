@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'nicomoji';
+    src: url('/fonts/nicomoji-plus_v2-5.ttf') format('truetype');
+}
+
 @theme {
     --color-main: #252525;
     --color-sub1: #333333;
     --color-sub2: #999999; 
+
+    --font-nicomoji: 'nicomoji', sans-serif;
 }
