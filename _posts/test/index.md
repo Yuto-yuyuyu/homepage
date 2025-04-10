@@ -1,7 +1,8 @@
 ---
 title: "Testだよ"
 date: "2023-10-01"
-
+excerpt: "テストの概要"
+tags: ["テスト", "記事", "テスト2"]
 ---
 
 # midashi

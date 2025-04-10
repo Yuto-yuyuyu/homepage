@@ -27,3 +27,23 @@ export function getAllPosts() {
     // console.log(posts);
     return posts;
 }
+
+export function getPostsByTag(tag: string) {
+    const slugs = getPostSlugs();
+    const posts = slugs
+        .map((slug) => getPostBySlug(slug))
+        .filter((post) => post.tags.includes(tag))
+        .sort((a, b) => (a.date > b.date ? -1 : 1));
+
+    return posts;
+}
+
+export function getAllTags() {
+    const slugs = getPostSlugs();
+    const tags = slugs
+        .map((slug) => getPostBySlug(slug))
+        .flatMap((post) => post.tags)
+        .filter((tag, index, self) => self.indexOf(tag) === index);
+
+    return tags;
+}
