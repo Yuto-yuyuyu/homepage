@@ -6,11 +6,11 @@ import { join } from 'path';
 const postsDirectory = join(process.cwd(), '_posts');
 
 export function getPostSlugs() {
-    return fs.readdirSync(postsDirectory);
+    return fs.readdirSync(postsDirectory, 'utf-8');
 }
 
 export function getPostBySlug(slug:string){
-    const realSlug = slug;
+    const realSlug = decodeURIComponent(slug);
     const fullPath = join(postsDirectory,  realSlug, 'index.md');
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);

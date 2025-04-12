@@ -2,6 +2,9 @@ import classnames from "classnames";
 import type { Metadata } from "next";
 import "./globals.css";
 
+import Header from "./_components/header";
+import Footer from "./_components/footer";
+
 import { notoSansJP } from "./fonts";
 
 export const metadata: Metadata = {
@@ -20,10 +23,13 @@ export default function RootLayout({
         className={classnames(
           notoSansJP.variable,
           notoSansJP.className,
+          "bg-[#fdfdfd] antialiased"
         )
         }
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

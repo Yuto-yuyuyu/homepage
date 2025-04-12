@@ -3,17 +3,17 @@ import Link from "next/link";
 import { Post } from "@/interfaces/post";
 import { getAllPosts } from "@/lib/api";
 
-import Header from "@/app/_components/header";
-import About from "../_components/about";
-import PostList from "../_components/post-list";
+import About from "@/app/_components/about";
+import TagAll from "@/app/_components/tag-all";
+import PostList from "@/app/_components/post-list";
 
 export default function Home() {
 
   return (
     <main>
-      <Header />
       <div className="">
         <About />
+        <TagAll />
         <PostList />
       </div>
     </main>

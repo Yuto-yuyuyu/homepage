@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Post } from "@/interfaces/post";
+import TagList from "./tag-list";
 
 export default function PostPreview({ post }: { post: Post }) {
     const imageUrl = post.image ? post.image : "/noimage.jpg";
@@ -27,6 +28,7 @@ export default function PostPreview({ post }: { post: Post }) {
                     <div className="text-sm text-gray-500">{formattedDate}</div>
                 </div>
             </Link>
+            <TagList tags={post.tags} />
         </div>
     )
 }

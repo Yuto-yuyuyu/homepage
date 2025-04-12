@@ -1,7 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHTML from "@/lib/markdownToHTML";
+import PostList from "@/app/_components/post-list";
 import 'katex/dist/katex.min.css';
 import 'highlight.js/styles/github.css';
 
@@ -14,8 +16,7 @@ type Params = {
 
 export default async function Post(props: Params) {
     const params = await props.params;
-    const post = getPostBySlug(params.slug);
-
+    const post = getPostBySlug(decodeURIComponent(params.slug));
     if (!post) {
         notFound();
     }
@@ -29,6 +30,7 @@ export default async function Post(props: Params) {
                 <p>{post.date}</p>
                 <div dangerouslySetInnerHTML={{ __html: content }} />
             </article>
+            <PostList tag={post.tags[0]} numPosts={3} />
         </main>
     );
 }
