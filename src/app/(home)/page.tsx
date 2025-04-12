@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main>
       <div className="">
-        <About />
+        {/* <About /> */}
         <TagAll />
         <PostList />
       </div>

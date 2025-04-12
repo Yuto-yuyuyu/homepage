@@ -8,7 +8,10 @@
 @theme {
     --color-main: #252525;
     --color-sub1: #333333;
-    --color-sub2: #999999; 
+    --color-sub2: #999999;
+    --color-sub3: #3B3B3B;
+    
+    --color-hov: #155dfc;
 
     --font-nicomoji: 'nicomoji', sans-serif;
 }
