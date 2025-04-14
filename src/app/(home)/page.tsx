@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <main>
       <div className="">
-        {/* <About /> */}
         <TagAll />
         <PostList />
       </div>

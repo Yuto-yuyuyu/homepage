@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Post } from "@/interfaces/post";
 import TagList from "./tag-list";
 import { CiCalendar } from "react-icons/ci";
-import { BsTagsFill } from "react-icons/bs";
+
 
 export default function PostPreview({ post }: { post: Post }) {
     const imageUrl = post.image ? post.image : "/noimage.jpg";
@@ -15,7 +15,7 @@ export default function PostPreview({ post }: { post: Post }) {
         day: "2-digit",
     });
     return (
-        <div className="shadow-md rounded-xl bg-white">
+        <div className="shadow-md rounded-xl bg-white my-4">
             <Link href={`/posts/${post.slug}`}>
                 <div className="">
                     <div className="aspect-video relative bg-main rounded-t-xl overflow-hidden">
@@ -28,7 +28,9 @@ export default function PostPreview({ post }: { post: Post }) {
                     </div>
                     
                     <div className="px-4 py-2">
-                        <div className="h-14 text-xl font-bold text-main hover:text-hov">{post.title}</div>
+                        <div className="pb-2 text-lg font-bold text-main hover:text-hov overflow-hidden text-clip ">
+                            {post.title}
+                        </div>
                         <div className="flex items-center gap-1">
                             <CiCalendar className="text-sub2 text-lg" />
                             <div className="text-sm text-sub2">{formattedDate}</div>
@@ -37,8 +39,7 @@ export default function PostPreview({ post }: { post: Post }) {
                     
                 </div>
             </Link>
-            <div className="mx-4 flex items-center gap-1">
-                <BsTagsFill className="text-sub3 text-lg" />
+            <div className="mx-4">
                 <TagList tags={post.tags} />
             </div>
         </div>
