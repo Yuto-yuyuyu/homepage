@@ -30,7 +30,7 @@ export default async function Post(props: Params) {
                 <p>{post.date}</p>
                 <div dangerouslySetInnerHTML={{ __html: content }} />
             </article>
-            <PostList tag={post.tags[0]} numPosts={3} />
+            <PostList tag={post.tags[0]} />
         </main>
     );
 }

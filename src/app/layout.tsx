@@ -23,12 +23,12 @@ export default function RootLayout({
         className={classnames(
           notoSansJP.variable,
           notoSansJP.className,
-          "bg-[#ffffff] antialiased max-w-6xl mx-auto"
+          "bg-[#ffffff] antialiased max-w-6xl mx-auto min-h-screen flex flex-col",
         )
         }
       >
         <Header />
-        <div className="mx-4 md:mx-8">
+        <div className="mx-4 md:mx-8 flex-grow">
           {children}
         </div>
         <Footer />
