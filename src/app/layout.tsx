@@ -23,7 +23,7 @@ export default function RootLayout({
         className={classnames(
           notoSansJP.variable,
           notoSansJP.className,
-          "bg-[#ffffff] antialiased max-w-6xl mx-auto min-h-screen flex flex-col",
+          "bg-[#f9f9f9] antialiased max-w-6xl mx-auto min-h-screen flex flex-col",
         )
         }
       >

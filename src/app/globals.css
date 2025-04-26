@@ -15,3 +15,10 @@
 
     --font-nicomoji: 'nicomoji', sans-serif;
 }
+
+.separator {
+    background: repeating-linear-gradient(45deg, #ddd, #ddd 6px, transparent 0, transparent 12px);
+    height: 4px;
+    margin: 28px 0 16px;
+    width: 100%;
+}

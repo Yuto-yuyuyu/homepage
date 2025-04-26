@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { getPostBySlug, getPostsByTag } from "@/lib/api";
 import TagAll from "@/app/_components/tag-all";
 import PostList from "@/app/_components/post-list";
+import Caption from "@/app/_components/caption";
+import Separator from "@/app/_components/separator";
 
 type Params = {
     params: Promise<{
@@ -23,9 +25,8 @@ export default async function Tags(props: Params) {
     return (
         <main>
             <TagAll pickedTag={tag} />
-            <div className="text-lg text-sub1 font-bold mt-3">
-                タグ「{tag}」の記事一覧
-            </div>
+            <Separator />
+            <Caption contents={"タグ「"+tag+"」の記事一覧"} />
             <PostList tag={tag} flag={true} />
         </main>
     );
