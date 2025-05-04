@@ -3,9 +3,11 @@ import { notFound } from "next/navigation";
 
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHTML from "@/lib/markdownToHTML";
+import TagAll from "@/app/_components/tag-all";
 import PostList from "@/app/_components/post-list";
 import Separator from "@/app/_components/separator";
 import Caption from "@/app/_components/caption";
+import PostHeader from "@/app/_components/post-header";
 import 'katex/dist/katex.min.css';
 import 'highlight.js/styles/github.css';
 
@@ -27,9 +29,20 @@ export default async function Post(props: Params) {
 
     return (
         <main>
+            <div className="hidden md:block">
+                <TagAll />
+                <Separator />
+            </div>
+            <PostHeader
+                slug={post.slug}
+                title={post.title}
+                date={post.date}
+                image={post.image}
+                excerpt={post.excerpt}
+                tags={post.tags}
+            />
+            <Separator />
             <article className="">
-                <h1>{post.title}</h1>
-                <p>{post.date}</p>
                 <div dangerouslySetInnerHTML={{ __html: content }} />
             </article>
             <Separator />

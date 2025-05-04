@@ -4,10 +4,10 @@ import { Post } from "@/interfaces/post";
 import TagList from "./tag-list";
 import { CiCalendar } from "react-icons/ci";
 
-
 export default function PostPreview({ post }: { post: Post }) {
-    const imageUrl = post.image ? post.image : "/noimage.jpg";
-    const altText = post.image ? post.title : "no image";
+    const imagePath = post.image ? `/_posts/${post.slug}/${post.image}` : "/noimage.jpg";
+    const imageUrl = post.image ? imagePath : "/noimage.jpg";
+    const altText = post.title
     const date = new Date(post.date);
     const formattedDate = date.toLocaleDateString("ja-JP", {
         year: "numeric",
@@ -26,7 +26,7 @@ export default function PostPreview({ post }: { post: Post }) {
                             className="object-contain"
                         />
                     </div>
-                    
+
                     <div className="px-4 py-2">
                         <div className="pb-2 text-lg font-bold text-main hover:text-hov overflow-hidden text-clip ">
                             {post.title}
@@ -36,7 +36,7 @@ export default function PostPreview({ post }: { post: Post }) {
                             <div className="text-sm text-sub2">{formattedDate}</div>
                         </div>
                     </div>
-                    
+
                 </div>
             </Link>
             <div className="mx-4">

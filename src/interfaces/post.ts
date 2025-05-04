@@ -5,7 +5,7 @@ export type Post = {
   title: string;
   date: string;
   image: string;
-  excerpt: string;
+  excerpt?: string;
   tags: string[];
   content: string;
   preview?: boolean;
