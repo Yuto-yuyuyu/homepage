@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @font-face {
     font-family: 'nicomoji';
@@ -14,6 +15,8 @@
     --color-hov: #0080FF;
 
     --font-nicomoji: 'nicomoji', sans-serif;
+
+    
 }
 
 .separator {

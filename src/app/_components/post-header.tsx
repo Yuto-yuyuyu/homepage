@@ -26,10 +26,10 @@ export default function PostHeader({slug, title, date, image, excerpt, tags }: P
                     className="object-cover object-center"
                 />
             </div>
-            <div className="text-2xl text-main font-bold mt-4">{title}</div>
+            <div className="text-3xl text-main font-bold mt-4">{title}</div>
             <div className="flex items-center gap-1 mt-2">
-                <CiCalendar className="text-sub2 text-lg" />
-                <div className="text-sub2 text-sm">{date}</div>
+                <CiCalendar className="text-sub2 text-xl" />
+                <div className="text-sub2 ">{date}</div>
             </div>
             <div className="flex items-center gap-1 mt-2">
                 <IoPricetagsOutline className="text-sub2 text-xl" />
