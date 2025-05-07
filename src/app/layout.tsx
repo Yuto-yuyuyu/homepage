@@ -8,8 +8,8 @@ import Footer from "./_components/footer";
 import { notoSansJP } from "./fonts";
 
 export const metadata: Metadata = {
-  title: "いつかやるかもしれない",
-  description: "そのうちできるかもしれないブログ",
+  title: "タイトル未定",
+  description: "タイトル未定なブログ",
 };
 
 export default function RootLayout({
