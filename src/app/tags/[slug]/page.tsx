@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { getPostsByTag } from "@/lib/api";
+import { getPostsByTag, getAllTags } from "@/lib/api";
 import TagAll from "@/app/_components/tag-all";
 import PostList from "@/app/_components/post-list";
 import Caption from "@/app/_components/caption";
@@ -29,4 +29,12 @@ export default async function Tags(props: Params) {
             <PostList tag={tag} flag={true} />
         </main>
     );
+}
+
+export async function generateStaticParams() {
+    const tags = getAllTags();
+
+    return tags.map((tag) => ({
+        slug: encodeURIComponent(tag),
+    }));
 }
