@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Post } from "@/interfaces/post";
 import TagList from "./tag-list";
 import { CiCalendar } from "react-icons/ci";
+import { BASE_PATH } from "@/constants/base-path";
 
 export default function PostPreview({ post }: { post: Post }) {
-    const imagePath = post.image ? `/_posts/${post.slug}/${post.image}` : "/noimage.jpg";
-    const imageUrl = post.image ? imagePath : "/noimage.jpg";
+    const imageUrl = post.image ? `${BASE_PATH}/_posts/${post.slug}/${post.image}` : `${BASE_PATH}/noimage.jpg`;
     const altText = post.title
     const date = new Date(post.date);
     const formattedDate = date.toLocaleDateString("ja-JP", {

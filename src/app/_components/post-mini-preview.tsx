@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Post } from "@/interfaces/post";
 import { CiCalendar } from "react-icons/ci";
 import { IoPricetagOutline } from "react-icons/io5";
+import { BASE_PATH } from "@/constants/base-path";
 
 export default function PostMiniPreview({ post }: { post: Post }) {
-    const imagePath = post.image ? `/_posts/${post.slug}/${post.image}` : "/noimage.jpg";
-    const imageUrl = imagePath;
+    const imageUrl = post.image ? `${BASE_PATH}/_posts/${post.slug}/${post.image}` : `${BASE_PATH}/noimage.jpg`;
     const altText = post.image ? post.title : "no image";
     const date = new Date(post.date);
     const formattedDate = date.toLocaleDateString("ja-JP", {

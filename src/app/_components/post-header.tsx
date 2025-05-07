@@ -3,6 +3,7 @@ import Image from "next/image";
 import TagList from "./tag-list";
 import { CiCalendar } from "react-icons/ci";
 import { IoPricetagsOutline } from "react-icons/io5";
+import { BASE_PATH } from "@/constants/base-path";
 
 type Props = {
     slug: string;
@@ -13,8 +14,7 @@ type Props = {
 };
 
 export default function PostHeader({slug, title, date, image, tags }: Props) {
-    const imagePath = image ? `/_posts/${slug}/${image}` : "/noimage.jpg";
-    const imageUrl = image ? imagePath : "/noimage.jpg";
+    const imageUrl = image ? `${BASE_PATH}/_posts/${slug}/${image}` : `${BASE_PATH}/noimage.jpg`;
     return (
         <div>
             <div className="relative w-full aspect-[16/9] md:aspect-[22/7] bg-main">
