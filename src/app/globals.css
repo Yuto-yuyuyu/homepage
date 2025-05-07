@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'nicomoji';
-    src: url('/fonts/nicomoji-plus_v2-5.ttf') format('truetype');
+    src: url('/homepage/fonts/nicomoji-plus_v2-5.ttf') format('truetype'); /*ごり押し*/
 }
 
 @theme {
