@@ -23,6 +23,7 @@ export default function PostHeader({slug, title, date, image, tags }: Props) {
                     alt={title}
                     fill
                     className="object-cover object-center"
+                    unoptimized
                 />
             </div>
             <div className="text-3xl text-main font-bold mt-4">{title}</div>

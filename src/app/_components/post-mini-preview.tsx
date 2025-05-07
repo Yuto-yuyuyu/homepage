@@ -24,6 +24,7 @@ export default function PostMiniPreview({ post }: { post: Post }) {
                             alt={altText}
                             fill
                             className="object-contain"
+                            unoptimized
                         />
                     </div>
                     
