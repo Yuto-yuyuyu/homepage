@@ -1,7 +1,6 @@
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { getPostBySlug, getPostsByTag } from "@/lib/api";
+import { getPostsByTag } from "@/lib/api";
 import TagAll from "@/app/_components/tag-all";
 import PostList from "@/app/_components/post-list";
 import Caption from "@/app/_components/caption";

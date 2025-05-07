@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Post } from "@/interfaces/post";
-import TagList from "./tag-list";
 import { CiCalendar } from "react-icons/ci";
 import { IoPricetagOutline } from "react-icons/io5";
 

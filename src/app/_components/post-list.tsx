@@ -1,6 +1,5 @@
 import PostPreview from "./post-preview";
 import PostMiniPreview from "./post-mini-preview";
-import { Post } from "@/interfaces/post";
 import { getAllPosts, getPostsByTag } from "@/lib/api";
 
 export default function PostList({tag, flag}: {tag?: string, flag?: boolean}) {

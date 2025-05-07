@@ -9,11 +9,10 @@ type Props = {
     title: string;
     date: string;
     image: string;
-    excerpt?: string;
     tags: string[];
 };
 
-export default function PostHeader({slug, title, date, image, excerpt, tags }: Props) {
+export default function PostHeader({slug, title, date, image, tags }: Props) {
     const imagePath = image ? `/_posts/${slug}/${image}` : "/noimage.jpg";
     const imageUrl = image ? imagePath : "/noimage.jpg";
     return (

@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { getAllPosts, getPostBySlug } from "@/lib/api";
@@ -40,7 +39,6 @@ export default async function Post(props: Params) {
                     title={post.title}
                     date={post.date}
                     image={post.image}
-                    excerpt={post.excerpt}
                     tags={post.tags}
                 />
                 <Separator />
