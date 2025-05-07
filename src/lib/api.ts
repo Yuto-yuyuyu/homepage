@@ -28,10 +28,11 @@ export function getAllPosts() {
 }
 
 export function getPostsByTag(tag: string) {
+    const realTag = decodeURIComponent(tag);
     const slugs = getPostSlugs();
     const posts = slugs
         .map((slug) => getPostBySlug(slug))
-        .filter((post) => post.tags.includes(tag))
+        .filter((post) => post.tags.includes(realTag))
         .filter((post) => post.preview)
         .sort((a, b) => (a.date > b.date ? -1 : 1));
 
