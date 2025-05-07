@@ -15,7 +15,7 @@ type Params = {
 export default async function Tags(props: Params) {
     const params = await props.params;
     const tag = decodeURIComponent(params.slug);
-    const posts = getPostsByTag(tag);
+    const posts = getPostsByTag(tag);   
 
     if (!posts) {
         notFound();

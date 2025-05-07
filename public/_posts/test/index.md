@@ -3,7 +3,7 @@ title: "あいうえおかきくけこ"
 date: "2023-10-01"
 image: "img.jpg"
 excerpt: "テストの概要"
-tags: ["テスト"]
+tags: ["テスト", "ブログ"]
 preview: true
 ---
 
