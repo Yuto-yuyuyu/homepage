@@ -6,6 +6,8 @@ import PostList from "@/app/_components/post-list";
 import Caption from "@/app/_components/caption";
 import Separator from "@/app/_components/separator";
 
+import { BASE_PATH } from "@/constants/base-path";
+
 type Params = {
     params: Promise<{
         slug: string;
@@ -14,7 +16,8 @@ type Params = {
 
 export default async function Tags(props: Params) {
     const params = await props.params;
-    const tag = decodeURIComponent(params.slug);
+    const tag = decodeURIComponent(params.slug).replace(`${BASE_PATH}/`, "");
+    console.log(tag);
     const posts = getPostsByTag(tag);   
 
     if (!posts) {
