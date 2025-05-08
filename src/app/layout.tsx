@@ -6,10 +6,15 @@ import Header from "./_components/header";
 import Footer from "./_components/footer";
 
 import { notoSansJP } from "./fonts";
+import { BASE_PATH } from "@/constants/base-path";
 
 export const metadata: Metadata = {
   title: "タイトル未定",
   description: "タイトル未定なブログ",
+  icons: {
+    icon: `${BASE_PATH}/favicon.ico`,
+    shortcut: `${BASE_PATH}/favicon.ico`,
+  },
 };
 
 export default function RootLayout({
