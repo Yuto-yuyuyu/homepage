@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 
 export default function Caption({contents, tag} : { contents: string, tag?: string }) {
-    const linkaddress = tag== "全ての記事" ? "/tags" : `/tags/${tag}`;
+    const linkaddress = tag === "全ての記事" ? "/tags" : `/tags/${encodeURIComponent(tag || "")}`;
     return (
         <div className="flex items-baseline">
             <div className="text-xl text-sub1 font-bold">

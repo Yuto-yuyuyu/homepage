@@ -6,6 +6,7 @@ import { IoPricetagOutline } from "react-icons/io5";
 import { BASE_PATH } from "@/constants/base-path";
 
 export default function PostMiniPreview({ post }: { post: Post }) {
+    const linkaddress = `/posts/${encodeURIComponent(post.slug)}`;
     const imageUrl = post.image ? `${BASE_PATH}/_posts/${post.slug}/${post.image}` : `${BASE_PATH}/noimage.jpg`;
     const altText = post.image ? post.title : "no image";
     const date = new Date(post.date);
@@ -16,7 +17,7 @@ export default function PostMiniPreview({ post }: { post: Post }) {
     });
     return (
         <div className="shadow-md rounded-xl bg-white my-4">
-            <Link href={`/posts/${post.slug}`}>
+            <Link href={linkaddress} >
                 <div className="flex items-center gap-2 ">
                     <div className="aspect-video relative w-[40%] bg-main rounded-l-xl overflow-hidden">
                         <Image

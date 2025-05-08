@@ -6,6 +6,7 @@ import { CiCalendar } from "react-icons/ci";
 import { BASE_PATH } from "@/constants/base-path";
 
 export default function PostPreview({ post }: { post: Post }) {
+    const linkaddress = `/posts/${encodeURIComponent(post.slug)}`;
     const imageUrl = post.image ? `${BASE_PATH}/_posts/${post.slug}/${post.image}` : `${BASE_PATH}/noimage.jpg`;
     const altText = post.title
     const date = new Date(post.date);
@@ -16,7 +17,7 @@ export default function PostPreview({ post }: { post: Post }) {
     });
     return (
         <div className="shadow-md rounded-xl bg-white my-4">
-            <Link href={`/posts/${post.slug}`}>
+            <Link href={linkaddress} >
                 <div className="">
                     <div className="aspect-video relative bg-main rounded-t-xl overflow-hidden">
                         <Image
